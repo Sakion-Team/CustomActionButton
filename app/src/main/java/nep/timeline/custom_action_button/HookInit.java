@@ -74,7 +74,7 @@ public class HookInit implements IXposedHookLoadPackage {
                             if (instance == null)
                                 return;
 
-                            if (action == KeyEvent.ACTION_DOWN) {
+                            if (action == KeyEvent.ACTION_DOWN && (keyCode == ACTION_BUTTON_CLICK || keyCode == ACTION_BUTTON_LONG_PRESS)) {
                                 if (keyCode == ACTION_BUTTON_CLICK) {
                                     long currentTime = System.currentTimeMillis();
                                     long timeDifference = currentTime - lastClickTime;
@@ -89,10 +89,11 @@ public class HookInit implements IXposedHookLoadPackage {
                                         }, 500);
 
                                     lastClickTime = currentTime;
-                                } else
+                                } else if (keyCode == ACTION_BUTTON_LONG_PRESS)
                                     onLongPress(instance);
+
+                                param.setResult(null);
                             }
-                            param.setResult(null);
                         } catch (Throwable throwable) {
                             Log.e(GlobalVars.TAG, Log.getStackTraceString(throwable));
                         }
