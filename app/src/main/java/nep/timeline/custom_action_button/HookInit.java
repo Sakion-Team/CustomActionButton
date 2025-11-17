@@ -51,14 +51,14 @@ public class HookInit implements IXposedHookLoadPackage {
             classLoader = packageParam.classLoader;
 
             try {
-                XposedHelpers.findAndHookConstructor("k8.l", classLoader, "android.content.Context", new XC_MethodHook() {
+                XposedHelpers.findAndHookConstructor("k8.l", classLoader, Context.class, new XC_MethodHook() {
                     @Override
                     protected void beforeHookedMethod(MethodHookParam param) {
                         context = (Context) param.args[0];
                     }
                 });
 
-                XposedHelpers.findAndHookMethod("k8.l$a", classLoader, "onKeyEvent", "android.view.KeyEvent", new XC_MethodHook() {
+                XposedHelpers.findAndHookMethod("k8.l$a", classLoader, "onKeyEvent", KeyEvent.class, new XC_MethodHook() {
                     private long lastClickTime = 0;
                     private final long DOUBLE_CLICK_THRESHOLD = 300;
                     private final Handler handler = new Handler(Looper.getMainLooper());
