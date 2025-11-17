@@ -10,14 +10,14 @@ https://github.com/Sakion-Team/CustomActionButton/blob/main/app/src/main/java/ne
 
 https://github.com/Sakion-Team/CustomActionButton/blob/main/app/src/main/java/nep/timeline/custom_action_button/HookInit.java#L40
 
-https://github.com/Sakion-Team/CustomActionButton/blob/main/app/src/main/java/nep/timeline/custom_action_button/HookInit.java#L40
+https://github.com/Sakion-Team/CustomActionButton/blob/main/app/src/main/java/nep/timeline/custom_action_button/HookInit.java#L44
 
 这三处分别是快捷键长按，双击和单击的处理 按照你的想法修改它们。
 
 https://github.com/Sakion-Team/CustomActionButton/blob/main/app/src/main/java/nep/timeline/custom_action_button/HookInit.java#L24
 
-https://github.com/Sakion-Team/CustomActionButton/blob/main/app/src/main/java/nep/timeline/custom_action_button/HookInit.java#L24
+https://github.com/Sakion-Team/CustomActionButton/blob/main/app/src/main/java/nep/timeline/custom_action_button/HookInit.java#L28
 
-https://github.com/Sakion-Team/CustomActionButton/blob/main/app/src/main/java/nep/timeline/custom_action_button/HookInit.java#L24
+https://github.com/Sakion-Team/CustomActionButton/blob/main/app/src/main/java/nep/timeline/custom_action_button/HookInit.java#L32
 
 这三处分别是打开相机，截图，切换静音、振动。将它们按照你喜欢的逻辑添加到上面三处快捷键处理的方法中即可
